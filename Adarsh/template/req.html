@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta property="og:image" content="https://i.postimg.cc/hjZyX06J/inbound530705833419031626.jpg" itemprop="thumbnailUrl">
+    <meta property="og:image" content="https://graph.org/file/2adf2df47eb42aecff48f.jpg" itemprop="thumbnailUrl">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>%s</title>
@@ -47,8 +47,8 @@
 
     <footer>
 	    <center><h4>Video not playing ? possibly because your browser or the player doesn't support codec please download and watch :D</h4></center><p>
-	    <center><h2><a href="https://t.me/MoviesNowV2">
-  <img src="https://i.postimg.cc/hjZyX06J/inbound530705833419031626.jpg" alt="kwicbotLogo" width="150" height="75"></center>
+	    <center><h2><a href="https://t.me/ProfessorContact_bot">
+  <img src="https://graph.org/file/2adf2df47eb42aecff48f.jpg" alt="Professor JD" width="150" height="75"></center>
 </a></center>
 	    	    
 <div class="justify-content-center align-items-center w-100 d-flex">
@@ -123,5 +123,52 @@
         const footer = document.querySelector('footer');
         const toogle = document.querySelector('.toogle');
     </script>
+	<script>
+        const videolink = window.location.href;
+        const  lazyLink = videolink.replace("/watch/", "/");
+
+        function vlc_player() {
+            const openLazyLink = lazyLink;
+            const openVlc = `vlc://${openLazyLink}`;
+            window.location.href = openVlc;
+        }
+	    
+	function mx_player() {
+            const openLazyLink = lazyLink;
+            const openMx = `intent:${openLazyLink}#Intent;package=com.mxtech.videoplayer.ad;end`;
+            window.location.href = openMx;
+        }
+        
+	function playit_player() {
+    	const openLazyLink = lazyLink;
+    	const openPlayit = `playit://playerv2/video?url=${openLazyLink}`;
+   	 window.location.href = openPlayit;
+	}
+	    
+	function s_player() {
+            const openLazyLink = lazyLink;
+            const openSplayer = `intent:${openLazyLink}#Intent;action=com.young.simple.player.playback_online;package=com.young.simple.player;end`;
+            window.location.href = openSplayer;
+        }
+	    
+	function km_player() {
+           const openLazyLink = lazyLink;
+           const openKmplayer = `intent:${openLazyLink}#Intent;package=com.kmplayer;end`;
+           window.location.href = openKmplayer;
+        }
+        
+	function hd_player() {
+           const openLazyLink = lazyLink;
+           const openHDplayer = `intent:${openLazyLink}#Intent;package=uplayer.video.player;end`;
+           window.location.href = openHDplayer;
+        }
+	    
+        function lazyDownload() {
+            const openLazyLink = lazyLink;
+            window.location.href = openLazyLink;
+        }
+
+		</script>
+	
 </body>
 </html>
