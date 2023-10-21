@@ -2,11 +2,12 @@ import logging
 import os
 import threading
 import time
+import aiohttp
 from asyncio import TimeoutError
 from pyrogram import filters
 from Adarsh.vars import Var
 
-LOGGER = logging.getLogger(__name__)
+logger = logging.getLogger(__name__)
 SIZE_UNITS = ['B', 'KB', 'MB', 'GB', 'TB', 'PB']
 
 class setInterval:
@@ -84,8 +85,10 @@ async def get_shortlink(link):
     if "http" == https:
         https = "https"
         link = link.replace("http", https)
-    url = f'https://{Var.URL_SHORTENR_WEBSITE}/api'
-    params = {'api': Var.URL_SHORTNER_WEBSITE_API,
+    URL = Var.URL_SHORTENR_WEBSITE
+    API = Var.URL_SHORTNER_WEBSITE_API
+    url = f'https://{URL}/api'
+    params = {'api': API,
               'url': link,
               }
 
@@ -97,8 +100,8 @@ async def get_shortlink(link):
                     return data['shortenedUrl']
                 else:
                     logger.error(f"Error: {data['message']}")
-                    return f'https://{Var.URL_SHORTENR_WEBSITE}/api?api={Var.URL_SHORTNER_WEBSITE_API}&link={link}'
+                    return f'https://{URL}/api?api={API}&link={link}'
 
     except Exception as e:
         logger.error(e)
-        return f'{Var.URL_SHORTENR_WEBSITE}/api?api={Var.URL_SHORTNER_WEBSITE_API}&link={link}'
+        return f'https://{URL}/api?api={API}&link={link}'
