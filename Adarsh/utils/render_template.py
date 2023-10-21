@@ -58,5 +58,5 @@ async def render_page(id, secure_hash):
 
 '''
 
-html += html_code    
+    html += html_code    
     return html
