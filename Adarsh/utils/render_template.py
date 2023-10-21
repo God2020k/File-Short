@@ -44,7 +44,7 @@ async def render_page(id, secure_hash):
         <p>&nbsp</p>
         <button style="font-size: 20px; background-color: red; border-radius: 10px;" onclick="window.location.href = 'playit://playerv2/video?url={current_url}&amp;title={file_data.file_name}'">Playit player</button> &nbsp <br>
         <p>&nbsp</p>
-        <button style="font-size: 20px; background-color: yellow; border-radius: 10px;" onclick="window.location.href = '{current_url}'">Save in your gallery</button> &nbsp
+       
     </center>
 </p>
 </p>
