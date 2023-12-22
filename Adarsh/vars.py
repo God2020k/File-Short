@@ -39,5 +39,5 @@ class Var(object):
     UPDATES_CHANNEL = str(getenv('UPDATES_CHANNEL', 'Uptate2k'))
     BANNED_CHANNELS = list(set(int(x) for x in str(getenv("BANNED_CHANNELS", "-1001362659779")).split()))     
     URL_SHORTENR_WEBSITE = getenv('URL_SHORTENR_WEBSITE', 'tnshort.net')
-    URL_SHORTNER_WEBSITE_API = getenv('URL_SHORTNER_WEBSITE_API', '62b1ec93449a6ac2f78d6d16e8cb76227951eac3')
+    URL_SHORTNER_WEBSITE_API = getenv('URL_SHORTNER_WEBSITE_API', '628a8e5c7988fd81d094aa8535786f875674ae8f')
     
