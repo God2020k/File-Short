@@ -9,9 +9,9 @@ load_dotenv()
 
 class Var(object):
     MULTI_CLIENT = False
-    API_ID = int(getenv('API_ID', '17627887'))
-    API_HASH = str(getenv('API_HASH', 'd14e54b0791ca1f8b0f26786439e336e'))
-    BOT_TOKEN = str(getenv('BOT_TOKEN', '6564513574:AAGDqUaEmeu0m4DjLDetNc4nooVTWYT7Fzo'))
+    API_ID = int(getenv('API_ID', '26872474'))
+    API_HASH = str(getenv('API_HASH', 'f8d3a289bf28a13a7159ad0b2ed114e7'))
+    BOT_TOKEN = str(getenv('BOT_TOKEN', '5667328946:AAF3whOueO6vFgTqU3BXZ6Ev0wDKAU-LAdU'))
     name = str(getenv('name', 'filetolinkbot'))
     SLEEP_THRESHOLD = int(getenv('SLEEP_THRESHOLD', '60'))
     WORKERS = int(getenv('WORKERS', '4'))
@@ -35,7 +35,7 @@ class Var(object):
         URL = "https://{}/".format(FQDN)
     else:
         URL = "http://{}/".format(FQDN)
-    DATABASE_URL = str(getenv('DATABASE_URL', 'mongodb+srv://King:king@file.fuxewu1.mongodb.net/?retryWrites=true&w=majority'))
+    DATABASE_URL = str(getenv('DATABASE_URL', 'mongodb+srv://Kannan:kannan@cluster0.jjtayw9.mongodb.net/?retryWrites=true&w=majority'))
     UPDATES_CHANNEL = str(getenv('UPDATES_CHANNEL', 'Uptate2k'))
     BANNED_CHANNELS = list(set(int(x) for x in str(getenv("BANNED_CHANNELS", "-1001362659779")).split()))     
     URL_SHORTENR_WEBSITE = getenv('URL_SHORTENR_WEBSITE', 'tnshort.net')
